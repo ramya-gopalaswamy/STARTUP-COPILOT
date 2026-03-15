@@ -1,0 +1,9 @@
+# Local env (may contain secrets)
+.env
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+# App state (optional; DB is source of truth when DATABASE_URL set)
+state.json

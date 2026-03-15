@@ -1,0 +1,31 @@
+{
+  "name": "founders-flight-deck-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "framer-motion": "latest",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.0",
+    "jszip": "^3.10.1",
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "recharts": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "postcss": "latest",
+    "tailwindcss": "^3.4.0",
+    "typescript": "latest"
+  }
+}

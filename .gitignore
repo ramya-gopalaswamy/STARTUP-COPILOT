@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# Env and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Build / IDE
+.DS_Store
+*.log
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Backend runtime
+backend/state.json
+backend/generated/
+
+# Misc
+*.zip

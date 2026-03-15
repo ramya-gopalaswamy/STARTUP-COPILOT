@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic
+websockets
+asyncpg
+pgvector
+redis
+boto3
+python-dotenv
+aws_sdk_bedrock_runtime>=0.4.0
+ddgs
+pypdf
+python-docx
+python-pptx
+ffmpeg-python

@@ -1,0 +1,186 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: #e4f4ff;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(0, 255, 229, 0.08), transparent 55%),
+    radial-gradient(circle at 80% 100%, rgba(117, 35, 255, 0.10), transparent 55%),
+    linear-gradient(180deg, #050b14 0%, #010206 60%, #000000 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -40px;
+  pointer-events: none;
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(255, 255, 255, 0.12) 1px,
+      transparent 0
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.06) 1px,
+      transparent 0
+    );
+  background-size: 180px 240px;
+  opacity: 0.35;
+  animation: marine-snow 36s linear infinite;
+  z-index: -1;
+}
+
+@keyframes marine-snow {
+  0% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+
+/* Oyster pearl: spinning inner core (duration set inline) */
+@keyframes pearl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* VC Scout: sonar pulse radiating outward */
+@keyframes sonar-pulse {
+  0% {
+    transform: scale(0.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Code Lab: welding spark around card edges */
+@keyframes welding-spark {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 229, 0.4), 0 0 15px rgba(0, 255, 229, 0.2), inset 0 0 20px rgba(0, 255, 229, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 255, 229, 0.8), 0 0 50px rgba(0, 255, 229, 0.3), inset 0 0 30px rgba(0, 255, 229, 0.1);
+  }
+}
+
+.welding-spark-once {
+  animation: welding-spark 0.4s ease-in-out 3;
+}
+
+/* Code Lab: wireframe line drawing */
+@keyframes wireframe-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Market Intelligence: scan line, intel pulse, shimmer */
+@keyframes intel-scan {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0.6;
+  }
+}
+
+@keyframes intel-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes intel-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes typing-cursor {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.2;
+  }
+}
+
+/* Market Intelligence: thin scrollbar for research log */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 255, 229, 0.35) transparent;
+}
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 229, 0.35);
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 229, 0.5);
+}
+
+/* Virtual Tank: speaking animation for shark tiles */
+@keyframes speaking-bob {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-1.5px); }
+  50% { transform: translateY(0.5px); }
+  75% { transform: translateY(-1px); }
+}
+.animate-speaking {
+  animation: speaking-bob 0.6s ease-in-out infinite;
+}
+
+@keyframes speaking-pulse-glow {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+.animate-speaking-pulse {
+  background: radial-gradient(
+    ellipse 60% 20% at 50% 85%,
+    rgba(0, 255, 229, 0.12) 0%,
+    transparent 70%
+  );
+  animation: speaking-pulse-glow 1.2s ease-in-out infinite;
+}
+
